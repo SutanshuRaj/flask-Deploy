@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<title>Upload an Image.</title>
+</head>
+
+<body>
+	<h2> Choose a File: </h2><br>
+	<form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+		<p><input type="file" name="file" autocomplete="off" id="inputFile" required></p>
+		<p><button type="submit"> Upload </button></p>
+	</form>
+	
+	{% if filename %}
+	<div>
+		<img src="{{ url_for('visualize', filename = filename)}}">
+	</div>
+	{% endif %}
+
+</body>
+</html>

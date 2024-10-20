@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Predict</title>
+</head>
+
+<body>
+	<h1>Enter the Details</h1>
+	<form method="post" action="/predict">
+		<label>CGPA</label><br>
+		<input type="text" name="cgpa"><br><br>
+
+		<label>IQ</label><br>
+		<input type="text" name="iq"><br><br>
+
+		<label>Profile</label><br>
+		<input type="text" name="profile"><br><br>
+
+		<input type="submit" value="Predict"><br><br>
+		{% if result %}
+			<p> {{ result }} </p>
+		{% endif %}
+	</form>
+
+</body>
+</html>
