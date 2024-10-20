@@ -10,4 +10,4 @@ COPY . /code/
 
 EXPOSE 8080
 
-CMD ["gunicorn", "--config", "config.py", "main:app"]
+CMD ["gunicorn", "--config", "config.py", "main:app", "--reload"]

@@ -1,0 +1,11 @@
+# Reference: Patrick Loeber - Dev Environment.
+
+services:
+  app:
+    build: .
+    container_name: flask-server
+    command: gunicorn --config config.py main:app --reload
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/code

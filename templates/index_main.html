@@ -8,7 +8,7 @@
 	<h2> Choose a File: </h2><br>
 	<form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
 		<p><input type="file" name="file" autocomplete="off" id="inputFile" required></p>
-		<p><button type="submit"> Upload </button></p>
+		<p><button type="submit"> Display </button></p>
 	</form>
 	
 	{% if filename %}
